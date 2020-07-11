@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        },
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "babel-plugin-styled-components", // allow better debugging for styled components on the browser
+      {
+        "fileName": false
+      }
+    ]
+  ]
+}

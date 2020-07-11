@@ -2,6 +2,8 @@
   -- prod config
     -- optimizar js output
     -- auto import react in tsx files
+    -- source maps
+    -- alias
 * add global components
   - conditional components
   - basic html abstractions
