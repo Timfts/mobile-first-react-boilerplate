@@ -1,21 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
 
-
-const MyRedBox = styled.div`
-  height: 30px;
-  width:30px;
-  background-color: red;
-`
+import HomePage from './pages/Home';
 
 
 
 const App = () => {
-  const date = new Date();
-  console.log("cenoura");
 return (
 <div>
-  <MyRedBox />
+  <HomePage siteTitle="my site" />
 </div>
 )
 }
