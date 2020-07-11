@@ -25,6 +25,7 @@
     "dotenv-webpack": "^2.0.0",
     "html-webpack-plugin": "^4.3.0",
     "source-map-loader": "^1.0.1",
+    "tslint": "^6.1.2",
     "typescript": "^3.9.6",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",

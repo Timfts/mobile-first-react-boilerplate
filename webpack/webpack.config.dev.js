@@ -1,35 +1,3 @@
-/* const path = require("path");
-
-module.exports = {
-  mode: "development",
-  entry: "./src/index.tsx",
-  target: "web",
-  devtool: "source-map",
-  resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: "/node_modules/",
-      },
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        loader: "source-map-loader",
-      },
-    ],
-  },
-  output: {
-    filename: "[name].js",
-    chunkFilename: "bundle.[name].js",
-    path: path.resolve(__dirname, "../dist"),
-  },
-}; */
-
 const { merge } = require("webpack-merge");
 const webpack = require("webpack");
 const commonConfig = require("./webpack.config.common");
