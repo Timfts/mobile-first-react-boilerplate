@@ -12,6 +12,7 @@ const HomePage = {
 function useHomePage(){
   useEffect(() => {
     console.log("homepage started")
+    
   }, []);
 }
 

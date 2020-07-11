@@ -1,1 +1,1 @@
-declare module "react-use-gesture"
+/* declare module "react-use-gesture" */
