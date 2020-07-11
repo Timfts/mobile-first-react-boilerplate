@@ -1,8 +1,7 @@
 * add webpack
-  -- common config
-  -- dev config
   -- prod config
-* add typescript
+    -- optimizar js output
+    -- auto import react in tsx files
 * add global components
   - conditional components
   - basic html abstractions

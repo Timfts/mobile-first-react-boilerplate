@@ -2,10 +2,12 @@ const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  target: "web",
   context: resolve(__dirname, "../src"), // set src as context for  webpack configurations
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+  },
+  performance: {
+    hints: "warning",
   },
   module: {
     rules: [
