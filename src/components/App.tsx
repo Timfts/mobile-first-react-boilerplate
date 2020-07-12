@@ -19,6 +19,7 @@ export default function App() {
         <GlobalStyles />
         <div>
           <p>header</p>
+          <Link to="/">main page</Link>
           <Link to="/second-page" >Second page</Link>
         </div>
         <Suspense fallback={<div>loading</div>}>

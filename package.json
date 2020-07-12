@@ -7,7 +7,11 @@
     "start": "webpack --config webpack/webpack.config.dev.js",
     "dev": "webpack-dev-server --config webpack/webpack.config.dev.js",
     "build": "webpack --config webpack/webpack.config.prod.js",
+    "postbuild": "react-snap",
     "analyze-bundle": "yarn build && webpack-bundle-analyzer --port 4200 dist/stats.json"
+  },
+  "reactSnap": {
+    "source": "dist"
   },
   "author": "Tim Fontes (@Timfts)",
   "license": "ISC",
@@ -25,6 +29,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "dotenv-webpack": "^2.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "react-snap": "^1.23.0",
     "source-map-loader": "^1.0.1",
     "tslint": "^6.1.2",
     "typescript": "^3.9.6",
