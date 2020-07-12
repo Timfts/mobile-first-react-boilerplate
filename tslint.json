@@ -3,7 +3,7 @@
   "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
     "trailng-comma": false,
     "semicolon": true,
     "no-console": [true, "log", "error"],
