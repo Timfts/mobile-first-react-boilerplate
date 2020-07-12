@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import S from '@components/common/TestComponent'
+import TestComponent from '@components/common/TestComponent';
 
 const HomePage = {
   Root: styled.div`
@@ -14,26 +14,19 @@ const HomePage = {
     width:30px;
     background-color:green;
   `
+};
+
+function useHomePage() {
+  return 'a';
 }
 
-function useHomePage(){
-  useEffect(() => {
-    console.log("homepage started")
-    
-  }, []);
-}
-
-interface HomePageProps {
-  siteTitle: string
-}
-
-export default function HomePageComponent({siteTitle}: HomePageProps){
+export default function HomePageComponent({ ...props }) {
   useHomePage();
   return (
-  <HomePage.Root>
-    <HomePage.Header />
-    <S />
-    {siteTitle}
-  </HomePage.Root>
-  )
+    <HomePage.Root>
+      <HomePage.Header />
+      <TestComponent />
+
+    </HomePage.Root>
+  );
 }

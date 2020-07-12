@@ -16,6 +16,7 @@ module.exports = merge(commonConfig, {
     filename: "[name].js",
     chunkFilename: "bundle.[name].js",
     path: resolve(__dirname, "../dist"),
+    publicPath: "/",
   },
   plugins: [
     new BundleAnalyzerPlugin({

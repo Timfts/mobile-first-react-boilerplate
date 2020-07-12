@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
 
 export default function TestComponent(){
-  return <p>example component</p>
+  return <p>example component</p>;
 }
