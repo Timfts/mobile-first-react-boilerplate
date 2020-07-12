@@ -12,12 +12,6 @@ module.exports = merge(commonConfig, {
   performance: {
     hints: "error", //stop build if bundle is too big
   },
-  output: {
-    filename: "[name].js",
-    chunkFilename: "bundle.[name].js",
-    path: resolve(__dirname, "../dist"),
-    publicPath: "/",
-  },
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: "disabled",

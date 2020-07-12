@@ -11,11 +11,6 @@ const SecondPage = lazy(() => import('./pages/SecondPage'));
 
 const customHistory = createBrowserHistory();
 
-const PageLoader = () => (
-  <Suspense fallback={<div>loading</div>}>
-    <SecondPage />
-  </Suspense>
-);
 
 export default function App() {
   return (
@@ -26,10 +21,12 @@ export default function App() {
           <p>header</p>
           <Link to="/second-page" >Second page</Link>
         </div>
-        <Switch>
-          <Route path="/" component={HomePage} />
-          <Route path="/second-page" component={PageLoader} />
-        </Switch>
+        <Suspense fallback={<div>loading</div>}>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/second-page" component={SecondPage} />
+          </Switch>
+        </Suspense>
       </Router>
     </Fragment>
   );

@@ -33,5 +33,11 @@ module.exports = {
       },
     ],
   },
+  output: {
+    filename: "[name].js",
+    chunkFilename: "bundle.[name].js",
+    path: resolve(__dirname, "../dist"),
+    publicPath: "/",
+  },
   plugins: [new HtmlWebpackPlugin({ template: "index.ejs" })],
 };
