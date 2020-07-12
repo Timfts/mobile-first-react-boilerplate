@@ -25,6 +25,7 @@ export default function App() {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/second-page" component={SecondPage} />
+            <Route path="*" render={() => <p>falhou</p>} />
           </Switch>
         </Suspense>
       </Router>

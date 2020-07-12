@@ -21,7 +21,8 @@ module.exports = merge(commonConfig, {
   },
   devServer: {
     hot: true, // enable HMR on the server
-    open: true
+    open: true,
+    historyApiFallback: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // enable HMR globally
