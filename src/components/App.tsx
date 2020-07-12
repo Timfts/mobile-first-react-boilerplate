@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Router, Switch, Link } from 'react-router-dom';
 import { createBrowserHistory } from "history";
+import { hot } from 'react-hot-loader/root';
 
 
 // Components
@@ -13,12 +14,12 @@ const SecondPage = lazy(() => import('./pages/SecondPage'));
 const customHistory = createBrowserHistory();
 
 
-export default function App() {
+function App() {
   return (
     <Router history={customHistory}>
       <GlobalStyles />
       <Header>
-        header
+        heades
       </Header>
       <div>
         <p>header</p>
@@ -36,4 +37,4 @@ export default function App() {
   );
 }
 
-
+export default hot(App);

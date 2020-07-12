@@ -12,7 +12,7 @@ const header = {
 export default function Header(props) {
   return (
     <header.Root>
-      header
+      headers
     </header.Root>
   );
 }

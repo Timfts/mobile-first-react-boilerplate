@@ -29,6 +29,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "dotenv-webpack": "^2.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "react-hot-loader": "^4.12.21",
     "react-snap": "^1.23.0",
     "rimraf": "^3.0.2",
     "source-map-loader": "^1.0.1",
