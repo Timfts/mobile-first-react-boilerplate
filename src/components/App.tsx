@@ -3,6 +3,8 @@ import { Route, Router, Switch, Link } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import { hot } from 'react-hot-loader/root';
 
+import useApp from './App.hook';
+
 
 // Components
 import Header from '@components/layout/Header';
@@ -15,17 +17,12 @@ const customHistory = createBrowserHistory();
 
 
 function App() {
+  const { toggleMenu, isMenuOpen } = useApp();
+
   return (
     <Router history={customHistory}>
       <GlobalStyles />
-      <Header>
-        heades
-      </Header>
-      <div>
-        <p>header</p>
-        <Link to="/">main page</Link>
-        <Link to="/second-page" >Second page</Link>
-      </div>
+      <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} />
       <Suspense fallback={<div>loading</div>}>
         <Switch>
           <Route exact path="/" component={HomePage} />

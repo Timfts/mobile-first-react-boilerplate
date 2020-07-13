@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.config.dev.js",
     "clean-dist": "rimraf dist/*",
-    "build": "yarn clean-dist && webpack --config webpack/webpack.config.prod.js",
-    "postbuild": "react-snap",
-    "analyze-bundle": "yarn build && webpack-bundle-analyzer --port 4200 dist/stats.json"
+    "pre-render-build": "react-snap",
+    "build-spa": "yarn clean-dist && webpack --config webpack/webpack.config.prod.js",
+    "build-pre-rendered": "yarn build-spa && yarn pre-render-build",
+    "analyze-bundle": "yarn build-spa && webpack-bundle-analyzer --port 4200 dist/stats.json"
   },
   "reactSnap": {
     "source": "dist"

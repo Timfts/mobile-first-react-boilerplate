@@ -3,7 +3,7 @@ import colors from './colors';
 
 export default css`
   :root{
-    --primary-color:${colors["ebony-clay"]};
-    --color-secondary: ${colors["carnation"]};
+    --color-primary:${colors["blue-teal"]};
+    --color-secondary: ${colors["orange-casablanca"]};
   }
 `;
