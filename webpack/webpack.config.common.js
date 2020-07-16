@@ -1,9 +1,9 @@
 const { resolve, join } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TSLintPlugin = require("tslint-webpack-plugin");
 
 // src directory of the application
-const srcDir = resolve(__dirname, "../src")
-
+const srcDir = resolve(__dirname, "../src");
 
 module.exports = {
   context: srcDir, // set src as context for  webpack configurations
@@ -11,24 +11,24 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"], // no necessity to write this extensions on every import
     // allow absolute imports on files
-     alias: {
-      "@components": join(srcDir, 'components/'),
-      "@functions": join(srcDir, 'functions/'),
-      "@hooks": join(srcDir, 'hooks/'),
-      "@theme": join(srcDir, 'theme/'),
-      "@assets": join(srcDir, 'assets/'),
-    }
+    alias: {
+      "@components": join(srcDir, "components/"),
+      "@functions": join(srcDir, "functions/"),
+      "@hooks": join(srcDir, "hooks/"),
+      "@theme": join(srcDir, "theme/"),
+      "@assets": join(srcDir, "assets/"),
+    },
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: ['babel-loader', 'source-map-loader'],
+        use: ["babel-loader", "source-map-loader"],
         exclude: /node_modules/,
       },
       {
         test: /\.tsx?$/,
-        use: 'babel-loader',
+        use: "babel-loader",
         exclude: "/node_modules/",
       },
     ],
@@ -39,5 +39,10 @@ module.exports = {
     path: resolve(__dirname, "../dist"),
     publicPath: "/",
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.ejs" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "index.ejs" }),
+    new TSLintPlugin({
+      files: ["../src/**/*.ts", "../src/**/*.tsx"],
+    }),
+  ],
 };

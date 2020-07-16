@@ -35,6 +35,8 @@
     "rimraf": "^3.0.2",
     "source-map-loader": "^1.0.1",
     "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-webpack-plugin": "^2.1.0",
     "typescript": "^3.9.6",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",

@@ -1,6 +1,5 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
     "no-trailing-whitespace": false,
@@ -9,5 +8,6 @@
     "no-console": [true, "log", "error"],
     "no-string-literal": false
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "extends": ["tslint:recommended", "tslint-config-prettier"]
 }

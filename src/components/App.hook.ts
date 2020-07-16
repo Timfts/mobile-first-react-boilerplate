@@ -1,16 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-
-
-export default function useApp(){
+export default function useApp() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function toggleMenu(){
+  function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
 
   return {
     isMenuOpen,
-    toggleMenu
+    toggleMenu,
   };
 }

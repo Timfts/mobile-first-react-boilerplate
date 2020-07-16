@@ -6,7 +6,7 @@
     "sourceMap": true,
     "module": "esnext",
     "jsx": "react",
-    "paths": {
+    "paths":{
       "@components/*": ["./components/*"],
       "@functions/*": ["./functions/*"],
       "@hooks/*": ["./hooks/*"],

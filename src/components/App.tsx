@@ -1,20 +1,18 @@
 import React, { lazy, Suspense } from "react";
-import { Route, Router, Switch } from 'react-router-dom';
+import { Route, Router, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import { hot } from 'react-hot-loader/root';
+import { hot } from "react-hot-loader/root";
 
-import useApp from './App.hook';
-
+import useApp from "./App.hook";
 
 // Components
-import Header from '@components/layout/Header';
 import GlobalStyles from "@components/styled-components/GlobalStyles";
+import Header from "@components/layout/Header";
+import MainMenu from "@components/layout/MainMenu";
 import HomePage from "./pages/Home";
-const SecondPage = lazy(() => import('./pages/SecondPage'));
-
+const SecondPage = lazy(() => import("./pages/SecondPage"));
 
 const customHistory = createBrowserHistory();
-
 
 function App() {
   const { toggleMenu, isMenuOpen } = useApp();
@@ -23,6 +21,7 @@ function App() {
     <Router history={customHistory}>
       <GlobalStyles />
       <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+      <MainMenu />
       <Suspense fallback={<div>loading</div>}>
         <Switch>
           <Route exact path="/" component={HomePage} />
