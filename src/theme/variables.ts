@@ -1,4 +1,4 @@
-export default {
+export const colors = {
   "blue-teal": "#064965",
   "green-lochinvar": "#2a8d87",
   "orange-casablanca": "#f3ba4f",

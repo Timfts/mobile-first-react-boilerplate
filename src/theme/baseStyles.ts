@@ -1,4 +1,5 @@
 import { css } from "styled-components";
+import { colors } from "./variables";
 
 export default css`
   *,
@@ -17,7 +18,6 @@ export default css`
   #root {
     width: 100%;
     height: 100%;
-    position: relative;
   }
 
   /* Remove blue highlight on touch elements on mobile chrome */

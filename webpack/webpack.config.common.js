@@ -1,6 +1,5 @@
 const { resolve, join } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const TSLintPlugin = require("tslint-webpack-plugin");
 
 // src directory of the application
 const srcDir = resolve(__dirname, "../src");
@@ -39,10 +38,5 @@ module.exports = {
     path: resolve(__dirname, "../dist"),
     publicPath: "/",
   },
-  plugins: [
-    new HtmlWebpackPlugin({ template: "index.ejs" }),
-    new TSLintPlugin({
-      files: ["../src/**/*.ts", "../src/**/*.tsx"],
-    }),
-  ],
+  plugins: [new HtmlWebpackPlugin({ template: "index.ejs" })],
 };

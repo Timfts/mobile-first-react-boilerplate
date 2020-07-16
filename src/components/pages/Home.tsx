@@ -1,31 +1,21 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import usePage from '@hooks/usePage';
+import React from "react";
+import styled from "styled-components";
+import usePage from "@hooks/usePage";
+
+import Page from "@components/styled-components/Page";
 
 const HomePage = {
-  Root: styled.div`
-    background-color:red;
-    width:100%;
-    height:80px;
+  Root: styled(Page)`
+    color:blue;
   `,
-
-  Header: styled.header`
-    height:30px;
-    width:30px;
-    background-color:green;
-  `
 };
 
 function useHomePage() {
-  const pageTitle = 'Welcome';
-  usePage({pageTitle});
+  const pageTitle = "Welcome";
+  usePage({ pageTitle });
 }
 
 export default function HomePageComponent({ ...props }) {
   useHomePage();
-  return (
-    <HomePage.Root>
-      <HomePage.Header />
-    </HomePage.Root>
-  );
+  return <p>homepage</p>;
 }

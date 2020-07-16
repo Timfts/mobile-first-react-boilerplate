@@ -19,6 +19,7 @@
         "fileName": true
       }
     ],
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    "polished"
   ]
 }
