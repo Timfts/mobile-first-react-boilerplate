@@ -1,6 +1,8 @@
 {
   "name": "mobile-react-boilerplate",
   "version": "1.0.0",
+  "author": "Tim Fontes (@Timfts)",
+  "license": "ISC",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +16,6 @@
   "reactSnap": {
     "source": "dist"
   },
-  "author": "Tim Fontes (@Timfts)",
-  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",

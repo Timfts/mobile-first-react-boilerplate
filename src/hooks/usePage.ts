@@ -7,12 +7,12 @@ import { useEffect } from "react";
  *  - change theme color meta tag on route change (this color is used in the mobile version of chrome to change the address bar color)
  */
 
-interface HookArgs {
+interface UsePageArgs {
   pageTitle: string;
   themeColor?: string;
 }
 
-export default function usePage({ pageTitle, themeColor }: HookArgs) {
+export default function usePage({ pageTitle, themeColor }: UsePageArgs) {
   function changePageTitle(title: string) {
     document.title = `${title} - PWA Boilerplate`;
   }
