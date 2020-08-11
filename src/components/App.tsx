@@ -10,7 +10,7 @@ import MainMenu from "@components/layout/MainMenu";
 import HomePage from "./pages/Home";
 
 import useApp from "./App.hook";
-import app from "./App.styled";
+import S from "./App.styled";
 
 const SecondPage = lazy(() => import("./pages/SecondPage"));
 const customHistory = createBrowserHistory();
@@ -21,8 +21,8 @@ function App() {
   return (
     <Router history={customHistory}>
       <GlobalStyles />
-      <app.Root>
-        <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+      <S.Root>
+        {/* <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} /> */}
         <MainMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <Suspense fallback={<div>loading</div>}>
           <Switch>
@@ -31,7 +31,7 @@ function App() {
             <Route path="*" render={() => <p>falhou</p>} />
           </Switch>
         </Suspense>
-      </app.Root>
+      </S.Root>
     </Router>
   );
 }

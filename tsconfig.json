@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "module": "esnext",
+    "moduleResolution": "node",
     "jsx": "react",
     "paths":{
       "@components/*": ["./components/*"],

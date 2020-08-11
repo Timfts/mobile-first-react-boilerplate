@@ -6,16 +6,30 @@ import Page from "@components/styled-components/Page";
 
 const HomePage = {
   Root: styled(Page)`
-    color:blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `,
+
+  Draggable: styled.div`
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
   `,
 };
 
-function useHomePage() {
+export default function HomePageComponent({ ...props }) {
   const pageTitle = "Welcome";
   usePage({ pageTitle });
-}
 
-export default function HomePageComponent({ ...props }) {
-  useHomePage();
-  return <p>homepage</p>;
+  function onDragBall(ev): void{
+    console.log(ev.touches);
+  }
+
+  return (
+    <HomePage.Root>
+      <HomePage.Draggable onTouchStart={onDragBall} />
+    </HomePage.Root>
+  );
 }

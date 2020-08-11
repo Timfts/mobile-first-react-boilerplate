@@ -7,5 +7,16 @@ export default {
     height: 100%;
     background-color: ${colors["cream-tusk"]};
     position: relative;
+    display: flex;
+    flex-direction: column;
+
+    * > {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
   `,
+  Headercontainer: styled.div`
+    background-color: red;
+  `,
+  PageContainer: styled.div``,
 };
