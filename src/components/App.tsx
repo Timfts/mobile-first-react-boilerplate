@@ -23,6 +23,9 @@ function App() {
       <GlobalStyles />
       <S.Root>
         {/* <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} /> */}
+        <S.Headercontainer>
+          
+        </S.Headercontainer>
         <MainMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <Suspense fallback={<div>loading</div>}>
           <Switch>
