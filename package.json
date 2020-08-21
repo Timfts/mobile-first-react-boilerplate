@@ -7,9 +7,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.config.dev.js",
-    "clean-dist": "rimraf dist/*",
+    "clean-dist": "gulp cleanDist",
+    "build-spa": "gulp build",
     "pre-render-build": "react-snap",
-    "build-spa": "yarn clean-dist && webpack --config webpack/webpack.config.prod.js",
     "build-pre-rendered": "yarn build-spa && yarn pre-render-build",
     "lint": "tslint './src/**/*.ts*' --format stylish --project . --force",
     "analyze-bundle": "yarn build-spa && webpack-bundle-analyzer --port 4200 dist/stats.json"
@@ -31,6 +31,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-polished": "^1.1.0",
     "dotenv-webpack": "^2.0.0",
+    "gulp": "^4.0.2",
     "html-webpack-plugin": "^4.3.0",
     "react-hot-loader": "^4.12.21",
     "react-snap": "^1.23.0",
