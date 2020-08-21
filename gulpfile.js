@@ -1,6 +1,6 @@
 const cleanDist = require("./tasks/clean-dist");
-const build = require("./tasks/build");
+const bundle = require("./tasks/bundle");
 const { series } = require("gulp");
 
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, build);
+exports.build = series(cleanDist, bundle);
