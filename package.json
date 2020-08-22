@@ -10,7 +10,7 @@
     "build-spa": "gulp build",
     "pre-render-build": "react-snap",
     "build-pre-rendered": "yarn build-spa && yarn pre-render-build",
-    "analyze:chunks": "gulp analyzeChunks",
+    "analyze-chunks": "gulp analyzeChunks",
     "lint": "tslint './src/**/*.ts*' --format stylish --project . --force"
   },
   "reactSnap": {
