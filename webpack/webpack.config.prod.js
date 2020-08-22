@@ -11,11 +11,11 @@ module.exports = merge(commonConfig, {
   performance: {
     hints: "error", //stop build if bundle is too big
   },
-  plugins: [
+/*   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: "disabled",
       generateStatsFile: true,
       statsOptions: { source: false },
     }),
-  ],
+  ], */
 });

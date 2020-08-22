@@ -20,11 +20,6 @@ module.exports = merge(commonConfig, {
       },
     ],
   },
-  devServer: {
-    hot: true, // enable HMR on the server
-    open: true,
-    historyApiFallback: true,
-  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // enable HMR globally
     new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates

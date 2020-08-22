@@ -6,13 +6,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/webpack.config.dev.js",
-    "clean-dist": "gulp cleanDist",
+    "dev": "gulp dev",
     "build-spa": "gulp build",
     "pre-render-build": "react-snap",
     "build-pre-rendered": "yarn build-spa && yarn pre-render-build",
-    "lint": "tslint './src/**/*.ts*' --format stylish --project . --force",
-    "analyze-bundle": "yarn build-spa && webpack-bundle-analyzer --port 4200 dist/stats.json"
+    "analyze:chunks": "gulp analyzeChunks",
+    "lint": "tslint './src/**/*.ts*' --format stylish --project . --force"
   },
   "reactSnap": {
     "source": "dist"
