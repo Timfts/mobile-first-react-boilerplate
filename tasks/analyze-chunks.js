@@ -9,7 +9,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
  * This task should bundle the project with prod configs and 
  * start bundle analyzer plugin server
  */
-module.exports = function analyzeChunks() {
+function analyzeChunksTask() {
   const analyzerPlugin = new BundleAnalyzerPlugin({
     analyzerMode: "server",
     defaultSizes: "gzip",
@@ -33,3 +33,5 @@ module.exports = function analyzeChunks() {
     });
   });
 };
+
+module.exports = analyzeChunksTask

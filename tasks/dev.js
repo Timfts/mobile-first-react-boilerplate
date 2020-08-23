@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const WebpackDevServer = require("webpack-dev-server");
 const webpackDevConfig = require("../webpack/webpack.config.dev");
 
-module.exports = function dev() {
+function devTask() {
   const port = 8081;
   const devServerConfig = {
     hot: true, // enable HMR on the server
@@ -17,4 +17,6 @@ module.exports = function dev() {
   server.listen(port, "localhost", () => {
     console.log(`Starting server on http://localhost:${port}`);
   });
-};
+}
+
+module.exports = devTask;
