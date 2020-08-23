@@ -1,5 +1,6 @@
 const { resolve, join } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 // src directory of the application
 const srcDir = resolve(__dirname, "../src");
@@ -33,10 +34,10 @@ module.exports = {
     ],
   },
   output: {
-    filename: "[name].js",
-    chunkFilename: "bundle.[name].js",
+    filename: "scripts/[name].js",
+    chunkFilename: "scripts/bundle.[name].js",
     path: resolve(__dirname, "../dist"),
     publicPath: "/",
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.ejs" })],
+  plugins: [new HtmlWebpackPlugin({ template: "index.ejs" }), new Dotenv()]
 };

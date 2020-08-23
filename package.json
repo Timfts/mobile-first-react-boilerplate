@@ -9,6 +9,8 @@
     "dev": "gulp dev",
     "build": "gulp build",
     "build:pre-rendered": "gulp build --pre-render",
+    "preview-dist": "gulp previewDist",
+    "preview-dist:pre-rendered": "gulp previewDist --pre-render",
     "analyze-chunks": "gulp analyzeChunks",
     "lint": "tslint './src/**/*.ts*' --format stylish --project . --force"
   },
@@ -31,6 +33,7 @@
     "dotenv-webpack": "^2.0.0",
     "gulp": "^4.0.2",
     "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
     "react-hot-loader": "^4.12.21",
     "react-snap": "^1.23.0",
     "rimraf": "^3.0.2",
