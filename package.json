@@ -7,9 +7,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev",
-    "build-spa": "gulp build",
-    "pre-render-build": "react-snap",
-    "build-pre-rendered": "yarn build-spa && yarn pre-render-build",
+    "build": "gulp build",
+    "build:pre-rendered": "gulp build --pre-render",
     "analyze-chunks": "gulp analyzeChunks",
     "lint": "tslint './src/**/*.ts*' --format stylish --project . --force"
   },
@@ -44,7 +43,8 @@
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9",
+    "yargs": "^15.4.1"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",

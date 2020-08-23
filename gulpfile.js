@@ -1,10 +1,14 @@
-const cleanDist = require("./tasks/clean-dist");
-const bundle = require("./tasks/bundle");
-const dev = require("./tasks/dev");
-const analyzeChunks = require("./tasks/analyze-chunks");
 const { series } = require("gulp");
+
+// tasks
+const cleanDist = require("./tasks/clean-dist"),
+  dev = require("./tasks/dev"),
+  analyzeChunks = require("./tasks/analyze-chunks"),
+  buildTask = require("./tasks/build");
+
+const analyzeChunksTask = series(cleanDist, analyzeChunks);
 
 exports.cleanDist = cleanDist;
 exports.dev = dev;
-exports.build = series(cleanDist, bundle);
-exports.analyzeChunks = series(cleanDist, analyzeChunks);
+exports.build = buildTask;
+exports.analyzeChunks = analyzeChunksTask;

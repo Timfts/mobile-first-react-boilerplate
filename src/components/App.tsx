@@ -24,7 +24,7 @@ function App() {
       <S.Root>
         {/* <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} /> */}
         <S.Headercontainer>
-          
+          <p>cenourinha</p>
         </S.Headercontainer>
         <MainMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <Suspense fallback={<div>loading</div>}>
