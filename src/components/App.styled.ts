@@ -17,6 +17,7 @@ export default {
   `,
   Headercontainer: styled.div`
     background-color: red;
+    margin:2px;
   `,
   PageContainer: styled.div``,
 };

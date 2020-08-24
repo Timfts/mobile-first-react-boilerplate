@@ -14,9 +14,6 @@
     "analyze-chunks": "gulp analyzeChunks",
     "lint": "tslint './src/**/*.ts*' --format stylish --project . --force"
   },
-  "reactSnap": {
-    "source": "dist"
-  },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",

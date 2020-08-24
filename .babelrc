@@ -16,7 +16,8 @@
     [
       "babel-plugin-styled-components", // allow better debugging for styled components on the browser
       {
-        "fileName": true
+        "fileName": true,
+        "pure": true
       }
     ],
     "react-hot-loader/babel",
