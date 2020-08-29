@@ -1,4 +1,4 @@
 module.exports = {
-  devServerPort: 8081,
+  devServerPort: 8000,
   previewServerPort: 4000,
 };

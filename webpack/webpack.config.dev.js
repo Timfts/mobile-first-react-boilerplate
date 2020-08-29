@@ -14,6 +14,9 @@ module.exports = merge(commonConfig, {
     "webpack/hot/only-dev-server", // bundle the client for hot reloading, only- means to only hot reload for successful updates
     "./index.tsx", // the entry point of our app
   ],
+  resolve: {
+    alias: { "react-dom": "@hot-loader/react-dom" },
+  },
   module: {
     rules: [
       {
