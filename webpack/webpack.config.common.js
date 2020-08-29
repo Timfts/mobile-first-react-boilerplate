@@ -39,5 +39,5 @@ module.exports = {
     path: resolve(__dirname, "../dist"),
     publicPath: "/",
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.ejs" }), new Dotenv()]
+  plugins: [new HtmlWebpackPlugin({ template: "template.ejs" }), new Dotenv()]
 };
