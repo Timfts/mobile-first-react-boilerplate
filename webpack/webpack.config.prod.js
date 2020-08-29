@@ -9,17 +9,4 @@ module.exports = merge(commonConfig, {
   performance: {
     hints: "error", //stop build if bundle is too big
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          name: "common",
-          enforce: true,
-          chunks: "all",
-          minChunks: 4,
-          reuseExistingChunk: true,
-        },
-      },
-    },
-  },
 });
