@@ -12,7 +12,7 @@ module.exports = merge(commonConfig, {
   entry: [
     `webpack-dev-server/client?http://localhost:${devServerPort}`, // bundle the client for webpack-dev-server and connect to the provided endpoint
     "webpack/hot/only-dev-server", // bundle the client for hot reloading, only- means to only hot reload for successful updates
-    "./index.tsx", // the entry point of our app
+    "./index.ts", // the entry point of our app
   ],
   resolve: {
     alias: { "react-dom": "@hot-loader/react-dom" },
