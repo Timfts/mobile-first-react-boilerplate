@@ -6,8 +6,9 @@
     "sourceMap": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "types": ["@emotion/core"],
     "jsx": "react",
-    "paths":{
+    "paths": {
       "@components/*": ["./components/*"],
       "@functions/*": ["./functions/*"],
       "@hooks/*": ["./hooks/*"],

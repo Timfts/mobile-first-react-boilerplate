@@ -2,6 +2,7 @@
   "presets": [
     "@babel/preset-react",
     "@babel/preset-typescript",
+    "@emotion/babel-preset-css-prop",
     [
       "@babel/preset-env",
       {
@@ -12,15 +13,5 @@
       }
     ]
   ],
-  "plugins": [
-    [
-      "babel-plugin-styled-components", // allow better debugging for styled components on the browser
-      {
-        "fileName": true,
-        "pure": true
-      }
-    ],
-    "react-hot-loader/babel",
-    "polished"
-  ]
+  "plugins": ["react-hot-loader/babel", "polished"]
 }

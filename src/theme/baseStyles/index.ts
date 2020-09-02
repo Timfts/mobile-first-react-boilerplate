@@ -1,7 +1,9 @@
-import { css } from "styled-components";
-import { colors } from "./variables";
+import { css } from "@emotion/core";
+import CSSvariables from "./cssVariables";
+import typography from "./typography";
 
 export default css`
+  ${CSSvariables}
   *,
   *::before,
   *::after {
@@ -29,4 +31,6 @@ export default css`
   a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
+  ${typography}
 `;

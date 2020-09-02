@@ -1,36 +1,29 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import { hot } from "react-hot-loader/root";
-
-// Components
-import Header from "@components/layout/Header";
-import MainMenu from "@components/layout/MainMenu";
-import HomePage from "./pages/Home";
-
-import useShell from "./Shell.hook";
-import S from "./Shell.styled";
-
-const SecondPage = lazy(() => import("./pages/SecondPage"));
+import { colors } from "@theme/variables";
 
 function Shell() {
-  const { toggleMenu, isMenuOpen } = useShell();
-
   return (
-    <S.Root>
-      {/* <Header onOpenMenu={toggleMenu} isMenuOpen={isMenuOpen} /> */}
-      <S.Headercontainer>
+    <div
+      css={{
+        width: "100%",
+        height: "100%",
+        backgroundColor: colors["cream-tusk"],
+        position: "relative",
+      }}
+    >
+      <div>
         <p>cenourinha</p>
         <Link to="/second-page">go to second page</Link>
-      </S.Headercontainer>
-      <MainMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
-      <Suspense fallback={<div>loading</div>}>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/second-page" component={SecondPage} />
-          <Route path="*" render={() => <p>falhou</p>} />
-        </Switch>
-      </Suspense>
-    </S.Root>
+      </div>
+
+      <Switch>
+        <Route exact path="/" render={() => <p>primeira página</p>} />
+        <Route path="/second-page" render={() => <p>segunda página</p>} />
+        <Route path="*" render={() => <p>falhou</p>} />
+      </Switch>
+    </div>
   );
 }
 

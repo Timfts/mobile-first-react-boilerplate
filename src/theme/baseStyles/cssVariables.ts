@@ -1,5 +1,5 @@
-import { css } from 'styled-components';
-import { colors } from './variables';
+import { css } from '@emotion/core';
+import { colors } from '../variables';
 
 export default css`
   :root{
