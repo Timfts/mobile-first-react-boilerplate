@@ -3,7 +3,13 @@ import { Route, Link, Switch } from "react-router-dom";
 import { hot } from "react-hot-loader/root";
 import { colors } from "@theme/variables";
 
+import MainMenu from "@components/layout/MainMenu";
+
+import useShell from "./Shell.hook";
+
 function Shell() {
+  const { isMenuOpen, toggleMenu } = useShell();
+
   return (
     <div
       css={{
@@ -13,8 +19,9 @@ function Shell() {
         position: "relative",
       }}
     >
+      <MainMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <div>
-        <p>cenourinha</p>
+        <button onClick={toggleMenu}>toggleMenu</button>
         <Link to="/second-page">go to second page</Link>
       </div>
 

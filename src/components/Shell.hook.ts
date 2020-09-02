@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 export default function useShell() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  function toggleMenu() {
+  function toggleMenu(): void {
     setIsMenuOpen(!isMenuOpen);
   }
 
