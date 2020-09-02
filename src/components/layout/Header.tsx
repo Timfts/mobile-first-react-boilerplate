@@ -1,39 +1,35 @@
 import React from "react";
-import styled from "styled-components";
 import { colors } from "@theme/variables";
 
-import HamburgerButton from "@components/common/HamburgerButton";
-
-const header = {
-  Root: styled.header`
-    background-color: ${colors["blue-teal"]};
-    color: ${colors["white"]};
-    height: 80px;
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    z-index: 2;
-  `,
-  BurgerButtonContainer: styled.div`
-    position: absolute;
-    right: 24px;
-  `,
-};
+import HamburgerMenu from "@components/common/HamburgerButton";
 
 interface HeaderProps {
-  onOpenMenu(...args: any): any;
+  toggleMenu(...args: any): any;
   isMenuOpen: boolean;
 }
 
-export default function Header({ onOpenMenu, isMenuOpen }: HeaderProps) {
+const Header: React.FC<HeaderProps> = ({ toggleMenu, isMenuOpen }) => {
   return (
-    <header.Root>
+    <header
+      css={{
+        color: colors["white"],
+        backgroundColor: colors["blue-teal"],
+        height: "80px",
+        fontWeight: 500,
+        position: "relative",
+        zIndex: 2,
+        display: "flex",
+        alignItems: "center",
+        padding: " 0 24px",
+        justifyContent: "space-between",
+      }}
+    >
       React mobile-first boilerplate
-      <header.BurgerButtonContainer>
-        <HamburgerButton isOpen={isMenuOpen} onClick={onOpenMenu} />
-      </header.BurgerButtonContainer>
-    </header.Root>
+      <div>
+        <HamburgerMenu isOpen={isMenuOpen} onClick={toggleMenu} />
+      </div>
+    </header>
   );
-}
+};
+
+export default Header;

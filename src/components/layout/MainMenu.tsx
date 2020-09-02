@@ -25,7 +25,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ isMenuOpen, toggleMenu }) => {
         paddingTop: "80px",
       }}
     >
-      <div
+      <ul
         css={{
           paddingTop: "80px",
           display: "flex",
@@ -33,11 +33,18 @@ const MainMenu: React.FC<MainMenuProps> = ({ isMenuOpen, toggleMenu }) => {
           alignItems: "center",
         }}
       >
-        <MainMenuItem label="item 1" path="/second-page" />
-        <MainMenuItem label="item 2" path="/second-page" />
-        <MainMenuItem label="item 3" path="/second-page" />
-      </div>
-      p
+        <MainMenuItem label="Home" path="/" onClick={toggleMenu} />
+        <MainMenuItem
+          label="Second page"
+          path="/second-page"
+          onClick={toggleMenu}
+        />
+        <MainMenuItem
+          label="Third page"
+          path="/second-page"
+          onClick={toggleMenu}
+        />
+      </ul>
     </div>
   );
 };

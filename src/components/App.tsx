@@ -8,11 +8,12 @@ import Shell from "./Shell";
 
 const customHistory = createBrowserHistory();
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <Router history={customHistory}>
       <Global styles={baseStyles} />
       <Shell />
     </Router>
   );
-}
+};
+export default App;
