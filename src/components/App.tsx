@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import { Global } from "@emotion/core";
+import { Global } from "@emotion/react";
 import baseStyles from "@theme/baseStyles";
 
 import Shell from "./Shell";
