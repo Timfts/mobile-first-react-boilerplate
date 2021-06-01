@@ -1,4 +1,5 @@
-* babel
 * react
+* emotion
 * webpack
+* typescript
 * minor
