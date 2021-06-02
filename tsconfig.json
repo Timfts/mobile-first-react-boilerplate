@@ -6,8 +6,9 @@
     "sourceMap": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "types": ["@emotion/core"],
-    "jsx": "react",
+    "jsxImportSource": "@emotion/react",
+    "jsx":"preserve",
+    "types": ["@emotion/react"],
     "paths": {
       "@components/*": ["./components/*"],
       "@functions/*": ["./functions/*"],

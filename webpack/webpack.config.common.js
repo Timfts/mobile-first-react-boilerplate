@@ -31,6 +31,10 @@ module.exports = {
         use: "babel-loader",
         exclude: "/node_modules/",
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   output: {
@@ -39,5 +43,5 @@ module.exports = {
     path: resolve(__dirname, "../dist"),
     publicPath: "/",
   },
-  plugins: [new HtmlWebpackPlugin({ template: "template.html" }), new Dotenv()]
+  plugins: [new HtmlWebpackPlugin({ template: "template.html" }), new Dotenv()],
 };
