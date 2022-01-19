@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Tes from "@/components/Tes";
 import BaseStyles from "./BaseStyles";
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
   return (
     <div>
       <BaseStyles />
-      <Tes />
+      <p>cenoura</p>
     </div>
   );
 }
