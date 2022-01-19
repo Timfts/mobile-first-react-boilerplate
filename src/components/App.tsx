@@ -1,14 +1,13 @@
-import { useState } from "react";
 import BaseStyles from "./BaseStyles";
+import { ThemeProvider } from "@emotion/react";
+import theme from "@/theme";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <BaseStyles />
       <p>cenoura</p>
-    </div>
+    </ThemeProvider>
   );
 }
 
