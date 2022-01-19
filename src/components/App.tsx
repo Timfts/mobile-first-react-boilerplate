@@ -5,8 +5,16 @@ import theme from "@/theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BaseStyles />
-      <p>cenoura</p>
+      <div
+        css={(theme) => ({
+          backgroundColor: theme?.colors?.["cream-tusk"],
+          width: "100vw",
+          height: "100vh",
+        })}
+      >
+        <BaseStyles />
+        <p>cenoura</p>
+      </div>
     </ThemeProvider>
   );
 }
