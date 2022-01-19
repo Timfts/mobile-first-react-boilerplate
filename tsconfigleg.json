@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsxImportSource": "@emotion/react",
+    "jsx":"preserve",
+    "types": ["@emotion/react"],
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@functions/*": ["./functions/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@theme/*": ["./theme/*"],
+      "@assets/*": ["./theme/*"]
+    }
+  }
+}

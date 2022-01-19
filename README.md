@@ -1,13 +1,21 @@
-The idea behind the design of this boilerplate, is to provide a native-like development UX on the web.
 
+fazer proj antigo rodar com stack nova
 
-# This boilerplate should cover projects that:
+- add vite
+  - add legacy bundle
+  - add pwa
+  - add assemblyscript
+  - update styles
+  - env variables
+  - polished
+  - absolute paths
+  -storybook
+  - envs
 
-- use PWA features
-- use gesture animations
-- use webassembly compiled from C++ (audio/image processing, games)
+  `"types": ["@emotion/react"],`
+    
 
-# Does not cover projects that:
-
-- need static code generation
-- SEO is a key feature
+remove webpack
+remove gulp
+add static paths
+change structure
