@@ -26,6 +26,14 @@ const BaseStyles = () => {
         a {
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
+        body {
+          font-family: "Raleway", sans-serif;
+        }
+
+        a {
+          text-decoration: none;
+        }
       `}
     />
   );

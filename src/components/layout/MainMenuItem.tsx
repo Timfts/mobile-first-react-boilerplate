@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { darken } from "polished";
-import { colors } from "@theme/variables";
+import { useTheme } from "@emotion/react";
 
 interface MainMenuItemProps {
   label: string;
@@ -14,10 +14,11 @@ const MainMenuItem: React.FC<MainMenuItemProps> = ({
   path,
   onClick,
 }) => {
+  const theme = useTheme();
   return (
     <li
       css={{
-        color: colors["white"],
+        color: theme?.colors?.["white"],
         fontWeight: 500,
         display: "flex",
         alignItems: "center",
@@ -38,14 +39,14 @@ const MainMenuItem: React.FC<MainMenuItemProps> = ({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: colors["blue-teal"],
+          backgroundColor: theme?.colors?.["blue-teal"],
           transition: "background-color .2s",
           "&, &:hover, &:active": {
             color: "white",
             textDecoration: "none",
           },
           "&:hover": {
-            backgroundColor: darken(0.05, colors["blue-teal"]),
+            backgroundColor: darken(0.05, theme?.colors?.["blue-teal"]),
           },
         }}
       >

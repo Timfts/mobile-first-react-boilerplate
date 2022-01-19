@@ -1,6 +1,6 @@
 import React from "react";
 import { darken } from "polished";
-import { colors } from "@theme/variables";
+import { useTheme } from "@emotion/react";
 
 import MainMenuItem from "./MainMenuItem";
 
@@ -10,10 +10,11 @@ interface MainMenuProps {
 }
 
 const MainMenu: React.FC<MainMenuProps> = ({ isMenuOpen, toggleMenu }) => {
+  const theme = useTheme();
   return (
     <div
       css={{
-        backgroundColor: darken(0.1, colors["blue-teal"]),
+        backgroundColor: darken(0.1, theme?.colors?.["blue-teal"]),
         width: "100%",
         height: "100vh",
         zIndex: 1,

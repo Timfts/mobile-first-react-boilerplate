@@ -1,7 +1,7 @@
 import React from "react";
-import { colors } from "@theme/variables";
+import { useTheme } from "@emotion/react";
 
-import HamburgerMenu from "@components/common/HamburgerButton";
+import HamburgerMenu from "@/components/common/HamburgerButton";
 
 interface HeaderProps {
   toggleMenu(...args: any): any;
@@ -9,11 +9,13 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ toggleMenu, isMenuOpen }) => {
+  const theme = useTheme();
+  
   return (
     <header
       css={{
-        color: colors["white"],
-        backgroundColor: colors["blue-teal"],
+        color: theme?.colors?.["white"],
+        backgroundColor: theme?.colors?.["blue-teal"],
         height: "80px",
         fontWeight: 500,
         position: "relative",

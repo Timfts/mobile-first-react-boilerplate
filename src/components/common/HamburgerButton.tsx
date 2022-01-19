@@ -1,5 +1,5 @@
 import React from "react";
-import { colors } from "@theme/variables";
+import { useTheme } from "@emotion/react";
 
 interface HamburgerMenuProps {
   isOpen: boolean;
@@ -7,8 +7,10 @@ interface HamburgerMenuProps {
 }
 
 const HamburgerButton: React.FC<HamburgerMenuProps> = ({ isOpen, onClick }) => {
+  const theme = useTheme();
+  
   const hamburgerLineBaseStyle = {
-    backgroundColor: colors["white"],
+    backgroundColor: theme?.colors?.["white"],
     height: "1px",
     width: "30px",
     transformOrigin: "left",

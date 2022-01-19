@@ -1,8 +1,16 @@
-import BaseStyles from "./BaseStyles";
 import { ThemeProvider } from "@emotion/react";
+import { Routes, Route } from "react-router-dom";
+import BaseStyles from "./BaseStyles";
 import theme from "@/theme";
 
+import useApp from "./App.hook";
+
+import Header from "./layout/Header";
+import MainMenu from "./layout/MainMenu";
+
 function App() {
+  const { isMenuOpen, toggleMenu } = useApp();
+
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -12,8 +20,14 @@ function App() {
           height: "100vh",
         })}
       >
+        <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+        <MainMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         <BaseStyles />
-        <p>cenoura</p>
+        <Routes>
+          <Route path="/" element={<p>primeira página</p>} />
+          <Route path="/second-page" element={<p>segunda página</p>} />
+          <Route path="*" element={<p>not found</p>} />
+        </Routes>
       </div>
     </ThemeProvider>
   );
