@@ -6,10 +6,6 @@ fazer proj antigo rodar com stack nova
   - add pwa
   - add assemblyscript
   - update styles
-  - env variables
-  - envs
-
-  `"types": ["@emotion/react"],`
     
 
 
