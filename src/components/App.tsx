@@ -24,8 +24,8 @@ function App() {
         <MainMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         <BaseStyles />
         <Routes>
-          <Route path="/" element={<p>primeira página</p>} />
-          <Route path="/second-page" element={<p>segunda página</p>} />
+          <Route path="/" element={<p>first page</p>} />
+          <Route path="/second-page" element={<p>second page</p>} />
           <Route path="*" element={<p>not found</p>} />
         </Routes>
       </div>
