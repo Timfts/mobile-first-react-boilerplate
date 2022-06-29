@@ -7,20 +7,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "polished": "4.1.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-router-dom": "6.2.1"
+    "polished": "4.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.3.0"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "11.7.2",
-    "@emotion/react": "11.8.2",
-    "@originjs/vite-plugin-commonjs": "^1.0.3",
-    "@types/react": "17.0.43",
-    "@types/react-dom": "17.0.14",
-    "@vitejs/plugin-legacy": "^1.8.0",
-    "@vitejs/plugin-react": "^1.3.0",
-    "typescript": "4.6.3",
-    "vite": "2.9.1"
+    "@emotion/babel-plugin": "11.9.2",
+    "@emotion/react": "11.9.3",
+    "@originjs/vite-plugin-commonjs": "1.0.3",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "@vitejs/plugin-legacy": "1.8.2",
+    "@vitejs/plugin-react": "1.3.2",
+    "typescript": "4.7.4",
+    "vite": "2.9.13"
   }
 }
